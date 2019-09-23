@@ -6,7 +6,7 @@ class Rentals(models.Model):
 
 	Date = fields.Date()
 
-	Books = fields.Many2one('brussels.library.customers')
+	Books = fields.Many2one('brussels.library.books')
 
-	Customers = fields.Many2one('brussels.library.books')
+	Customers = fields.Many2one('brussels.library.customers')
 
