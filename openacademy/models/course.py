@@ -1,4 +1,4 @@
-from oddo import models,fields,api
+from odoo import models,fields,api
 
 
 class Course(Models.model):
@@ -15,4 +15,3 @@ class Course(Models.model):
 
 	session_ids = fields.One2many('openacademy.session', 'course_id')
 
-	
