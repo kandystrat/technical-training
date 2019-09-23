@@ -14,7 +14,7 @@ class Books(models.Model):
 
 	ISBN = fields.Char()
 
-	Customer = fields.One2many("brussels.library.rentals", "books")
+	Customer = fields.One2many("brussels.library.rentals", "Books")
 
 
 

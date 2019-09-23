@@ -10,7 +10,7 @@ class Customers(models.Model):
 
 	Email = fields.Char()
 
-	Books = fields.One2many("brussels.library.rentals", "customers")
+	Books = fields.One2many("brussels.library.rentals", "Customers")
 
 
 
