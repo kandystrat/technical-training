@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, api
-from odoo.experience import ValidationError,Warning
+from odoo.exceptions import ValidationError,Warning
 
 
 class Course(models.Model):
@@ -49,6 +49,15 @@ class Session(models.Model):
     def get_number_attendees(self):
         for rec in self:
             rec.number_attendees = len (rec.attendee_ids)/(capacity*100.0)
+
+
+    @api.constrains('number_attendees','capacity')
+    def _check_num_capacity(self):
+        if self.capacity < self.number_attendees:
+            raise Warning('Too much attendees for room capacity! onchange')
+            
+
+
 
 
 
