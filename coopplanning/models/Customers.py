@@ -1,8 +1,8 @@
 from odoo import models,fields,api
 
 class Customers(models.Model):
-	_name = 'Brussels_Library.Customers'
-	_description = 'This is a Customers of the Brussels_Library.'
+	_name = 'brussels.library.customers'
+	_description = 'This is a Customers of the brussels.library.'
 
 	Name = fields.Char()
 
@@ -10,7 +10,7 @@ class Customers(models.Model):
 
 	Email = fields.Char()
 
-	Books = fields.One2many("Brussels_Library.Rentals", "Customers")
+	Books = fields.One2many("brussels.library.rentals", "customers")
 
 
 
