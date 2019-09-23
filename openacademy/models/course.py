@@ -29,3 +29,35 @@ class Session(models.Model):
     instructor_id = fields.Many2one('openacademy.partner', string="Instructor")
     course_id = fields.Many2one('openacademy.course', ondelete='cascade', string="Course", required=True)
     attendee_ids = fields.Many2many('openacademy.partner', string="Attendees")
+
+    capacity = fields.Integer()
+    number_attendees = fields.Integer(compute="get_number_attendees"), ('Too much attendees for room capacity! SQL'),
+
+    @api.contstrains('number_attendees','capacity')
+    def _check_num_capacity(self):
+            for rec in self:
+                if rec.number_attendees > 100:
+                    raise ValidationError('Too much attendees for room capacity! python')
+
+    @api.depends('attendee_ids')
+    def get_number_attendees(self):
+        for rec in self:
+            rec.number_attendees = len (rec.attendee_ids)/(capacity*100.0)
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
