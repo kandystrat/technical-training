@@ -48,7 +48,7 @@ class Session(models.Model):
     @api.depends('attendee_ids')
     def get_number_attendees(self):
         for rec in self:
-            rec.number_attendees = len (rec.attendee_ids)/(capacity*100.0)
+            rec.number_attendees = len (rec.attendee_ids)/(rec.capacity*100.0)
 
 
     @api.constrains('number_attendees','capacity')
