@@ -39,7 +39,7 @@ class Session(models.Model):
 ]
 
 
-    @api.contstrains('number_attendees','capacity')
+    @api.constrains('number_attendees','capacity')
     def _check_num_capacity(self):
             for rec in self:
                 if rec.number_attendees > 100:
@@ -55,7 +55,7 @@ class Session(models.Model):
     def _check_num_capacity(self):
         if self.capacity < self.number_attendees:
             raise Warning('Too much attendees for room capacity! onchange')
-            
+
 
 
 
