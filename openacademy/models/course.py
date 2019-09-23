@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models
+from odoo import fields, models, api
+from odoo.experience import ValidationError,Warning
 
 
 class Course(models.Model):
@@ -31,7 +32,12 @@ class Session(models.Model):
     attendee_ids = fields.Many2many('openacademy.partner', string="Attendees")
 
     capacity = fields.Integer()
-    number_attendees = fields.Integer(compute="get_number_attendees"), ('Too much attendees for room capacity! SQL'),
+    number_attendees = fields.Integer(compute="get_number_attendees", store=True)
+
+    _sql_contrants = [
+        ('check_num_capacity'), 'CHECK(capacity >= number_attendees', 'Too much attendees for room capacity! SQL'),
+]
+
 
     @api.contstrains('number_attendees','capacity')
     def _check_num_capacity(self):
@@ -44,7 +50,7 @@ class Session(models.Model):
         for rec in self:
             rec.number_attendees = len (rec.attendee_ids)/(capacity*100.0)
 
-            
+
 
 
 
