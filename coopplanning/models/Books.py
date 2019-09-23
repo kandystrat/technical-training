@@ -10,7 +10,7 @@ class Books(models.Model):
 
 	Editors = fields.Char()
 
-	Year_of_Edition = fields.Integar()
+	Year_of_Edition = fields.Integer()
 
 	ISBN = fields.Char()
 
