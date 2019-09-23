@@ -1,3 +1,5 @@
+from odoo import models,fields,api
+
 class Person(models.Model):
 	_name = 'openacademy.person'
 	_description = 'This is a course of the Westeros Library.'

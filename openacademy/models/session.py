@@ -1,3 +1,4 @@
+from odoo import models,fields,api
 
 class Session(models.Model):
 	_name = 'openacademy.session'
