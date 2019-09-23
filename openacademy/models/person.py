@@ -4,7 +4,7 @@ class Person(models.Model):
 	_name = 'openacademy.person'
 	_description = 'This is a course of the Westeros Library.'
 
-	name = fields.char()
+	name = fields.Char()
 
 	is_teacher = fields.Boolean()
 

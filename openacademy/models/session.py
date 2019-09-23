@@ -4,7 +4,7 @@ class Session(models.Model):
 	_name = 'openacademy.session'
 	_description = 'This is a course of the Westeros Library.'
 
-	name = fields.Char
+	name = fields.Char()
 
 	start_date = fields.Datetime()
 
