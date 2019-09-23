@@ -1,5 +1,5 @@
 
-class Session(Models.model):
+class Session(models.Model):
 	_name = 'openacademy.session'
 	_description = 'This is a course of the Westeros Library.'
 

@@ -1,4 +1,4 @@
-class Person(Models.model):
+class Person(models.Model):
 	_name = 'openacademy.person'
 	_description = 'This is a course of the Westeros Library.'
 
