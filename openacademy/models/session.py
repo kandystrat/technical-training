@@ -14,6 +14,6 @@ class Session(models.Model):
 
 	teacher_id = fields.Many2one ('openacademy.person')
 
-	attendee_ids = fields.Many2many('openacademy.perons')
+	attendee_ids = fields.Many2many('openacademy.person')
 
 	room_capacity = fields.Integer()
