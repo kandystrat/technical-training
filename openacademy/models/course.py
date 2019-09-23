@@ -1,7 +1,7 @@
 from odoo import models,fields,api
 
 
-class Course(Models.model):
+class Course(models.Model):
 	_name = 'openacademy.course'
 	_description = 'This is a course of the Westeros Library.'
 
