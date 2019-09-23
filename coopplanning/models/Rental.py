@@ -8,5 +8,5 @@ class Rentals(models.Model):
 
 	Books = fields.Many2one('brussels.library.customers')
 
-	Customers = fields.Many2one('brussels.library.book')
+	Customers = fields.Many2one('brussels.library.books')
 
