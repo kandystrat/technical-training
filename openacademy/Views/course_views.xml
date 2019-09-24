@@ -31,7 +31,7 @@
 							<field name="description"/>
 						</page>
 						<page name="page_session" string="Session">
-							<field name="Session"/>
+							<field name="session_ids"/>
 						</page>
 					</notebook>
 				</sheet>
