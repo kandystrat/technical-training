@@ -14,7 +14,7 @@
 <record id="course_tree_view" model="ir.ui.view">
 		<field name="name">course.form.view</field>
 		<field name="model">openacademy.course</field>
-		<field name+"arch" type="xml">
+		<field name="arch" type="xml">
 			<form>
 				<header>
 					<field name="level" widget="statusbar"/>
