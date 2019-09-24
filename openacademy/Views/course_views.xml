@@ -12,7 +12,7 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<menuitem id="top_menu_openacademy" name="Openacademy" web_icon="openacademy, data/crazy.jpg"/>
+	<menuitem id="top_menu_openacademy" name="Openacademy" web_icon="openacademy,data/crazy.jpg"/>
 
 	<menuitem id="course_menu" name="Courses &amp; Sessions" parent="openacademy.top_menu_openacademy"/>
 
