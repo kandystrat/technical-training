@@ -16,7 +16,7 @@
 
 	<menuitem id="course_menu" name="Courses &amp; Sessions" parent="openacademy.top_menu_openacademy"/>
 
-	<menuitem id="coruse_name_menu" name="Courses" parents="openacademy.course_menu_top" action="action_course"/>
+	<menuitem id="coruse_name_menu" name="Courses" parent="openacademy.course_menu_top" action="action_course"/>
 
 	<menuitem id="session_menu" name="Sessions" parent="openacademy.course_menu_top" action="action_session"/>
 </odoo>
