@@ -7,7 +7,7 @@
 				<field name="name"/>
 				<field name="responsible"/>
 				<field name="level"/>
-			<tree>
+			</tree>
 		</field>
 	</record>
 
