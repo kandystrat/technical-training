@@ -20,3 +20,5 @@
 
 	<menuitem id="session_menu" name="Sessions" parent="openacademy.course_menu_top" action="action_session"/>
 </odoo>
+
+
