@@ -35,7 +35,7 @@ class Session(models.Model):
     number_attendees = fields.Integer(compute="get_number_attendees", store=True)
 
     _sql_constraints = [
-        ('check_num_capacity', 'CHECK(number_attendees > 100)', 'Too much attendees for room capacity! SQL'),
+        ('check_num_capacity', 'CHECK(number_attendees >= ', 'Too much attendees for room capacity! SQL'),
 ]
 
 
