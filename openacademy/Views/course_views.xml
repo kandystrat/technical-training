@@ -9,21 +9,21 @@
 				</header>
 				<sheet>
 					<h1>
-						<field name="name"/>
+						<field name="name" required="1"/>
 					</h1>
 					<group name="time_group" string="Timing">
 						<field name="start_date"/>
-						<field name="duration"/>
+						<field name="duration" attrs="{'invisible': [('start_date','=',False)]}"/>
 					</group>
 					<group name="info_group" string="Information">
 						<field name="instructor_id"/>
 						<field name="course_id"/>
-						<field name="seats"/>
+						<field name="seats" attrs="{'invisible': [('start_date','=',0)]}"/>
 						<field name="taken_seats" widget="progressbar"/>
 					</group>
 					<notebook>
 						<page name="page_attendees" string="Attendees">
-							<field name="attendee_ids">
+							<field name="attendee_ids" domain="[('instructor','=',False)]">
 								<tree editable="bottom">
 									<field name="name"/>
 									<field name="instructor"/>
@@ -62,7 +62,7 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 
-	<menuitem id="top_menu_openacademy" name="Openacademy" web_icon="openacademy,data/grumpy.jpeg"/>
+	<menuitem id="top_menu_openacademy" name="Openacademy" web_icon="openacademy,data/crazy.jpg"/>
 
 	<menuitem id="course_menu_top" name="Courses &amp; Sessions" parent="openacademy.top_menu_openacademy"/>
 
